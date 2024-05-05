@@ -1,0 +1,175 @@
+
+#produces_logo 
+{
+    width: 100%;
+    height: 700px;          
+    background-color: white;
+    position: relative;
+    top: 110px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+#title_produce 
+{
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.id_product{
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-color: var(--logoColor);
+    color: white;
+    padding: 6px 8px;
+    border-radius: 3px;
+    border-top-left-radius: 20px;
+    border: 2px solid var(--logoColor);
+    box-shadow: 0px 0px 10px 5px rgba(51, 43, 43, 0.2);
+    z-index: 2;
+    font-size: 13px;
+}
+.produce_item 
+{
+    position: relative;
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 5px rgba(51, 43, 43, 0.2);
+    border: 2px solid #ffffff00;
+    box-sizing: border-box;
+}
+
+.produce_item:hover 
+{
+    border: 2px solid var(--hoverColor);
+    transition-delay: 0.2s;
+}
+.produce_item:hover .id_product 
+{
+    box-shadow: 0px 0px 10px 5px rgba(255, 0, 0, 0.296);
+    transition-delay: 0.2s;
+}
+#list_produce 
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.produce_img>img 
+{
+    object-fit: contain;
+    width: 60%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.produce_img 
+{
+    width: 180px;
+    height: 130px;
+    text-align: center;
+}
+
+.produce_info_container 
+{
+    padding: 10px;
+    position: relative;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+.produce_info{
+    flex: 4;
+    position: relative;
+
+}
+.produce_name 
+{
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.produce_price 
+{
+    color: var(--logoColor);
+    text-align: center;
+  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.produce_activity 
+{
+    display: flex;
+    flex: 1;
+    gap: 14px;
+  
+}
+
+.button_buy button 
+{
+    background-color: white;
+    border: 2px solid var(--logoColor);
+    border-radius: 5px;
+    color: var(--logoColor);
+    padding: 7px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.button_buy button:active 
+{
+    color: white;
+    background-color: var(--logoColor);
+    transition: 0.1s;
+}
+/* .button_save{
+    transition: 1s ease;
+} */
+.button_save i 
+{
+    font-size: 25px;
+    color: var(--clickChange);
+    cursor: pointer;
+    margin-top: 3px;
+    transition: 0.5s ease;
+
+}
+
+.button_save i:hover 
+{
+    color: var(--logoColor);
+}
+
+.heart_item 
+{
+    font-weight: 10;
+    text-align: end;
+    color: var(--clickChange);
+    display: flex;
+    justify-content: end;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.heart_item i 
+{
+    font-size: 20px;
+    color: var(--clickChange);
+    transition: 0.2s ease;
+}

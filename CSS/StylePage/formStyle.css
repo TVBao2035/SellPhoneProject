@@ -1,0 +1,141 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+body{
+    background-color: rgb(176, 175, 175);
+    height: 700px;
+    display: flex;
+    align-items: center;
+}
+
+.form_sign{
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    border-radius: 40px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.form_contain--main{
+    background-color: rgb(255, 255, 255);
+    height: 90%;
+    width: 90%;
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header{
+    color: var(--logoColor);
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+}
+footer a{
+    font-family: sans-serif;
+    text-decoration: none;
+    color: var(--logoColor);
+}
+
+footer a:hover{
+    color:  rgb(255, 47, 47);
+}
+.form_input{
+    height: 80px;
+    margin-bottom: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.form_input label{
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.form_input input{
+    font-family: sans-serif;
+    font-weight: 300;
+    height: 25px;
+    padding: 5px;
+    outline: none;
+}
+.form_input input:hover{
+    border: 2px solid rgb(0, 254, 68);
+}
+
+
+.form_input span{
+    color: #333;
+    font-size: 11px;
+    font-weight: 100;
+    font-family:  sans-serif;
+    position: absolute;
+    bottom: -10px;
+}
+
+.form_submit{
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+
+.form_submit input{
+    background-color: var(--logoColor);
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 8px;
+}
+
+.form_submit input:active{
+    opacity: 0.7;
+}
+
+.isValid{
+    color: var(--logoColor);
+    border: 2px solid var(--logoColor);
+}
+
+.border--red{
+    border: 2px solid  rgb(251, 15, 15);
+}
+
+.border--green{
+    border: 2px solid  #00fe44;
+
+}
+
+
+.form_up{
+    height: 650px;
+}
+.main_form--up{
+    height: 85%;
+}

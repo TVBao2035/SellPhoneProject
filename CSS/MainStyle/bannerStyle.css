@@ -1,0 +1,147 @@
+#bannerHead 
+{
+    width: 100%;
+    height: 100px;
+    background-color: var(--logoColor);
+    position: fixed;
+    top: 0px;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+#ul_bannerHead 
+{   
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 17px;
+    color: white;
+    font-family: monospace;
+    width: 711px;
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+}
+
+#nav_menu 
+{
+    position: relative;
+    height: 100px;
+    display: flex;
+}
+
+.list-items 
+{
+    list-style: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 20px;
+    position: relative;
+    padding: 8px;
+    transition: 0.5s ease;
+    border-radius: 30px;
+    background-color: var(--logoColor);
+
+}
+.list_menu--account{
+    width: 180px;
+    display: none;
+    position: absolute;
+    left: -70px;
+    top: 40px;
+    list-style: none;
+    padding: 0;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67, 0.1), 0px 2px 6px 2px rgba(60,64, 67, 0.2);
+}
+
+.item_menu--account:hover{
+   background-color: #4444443f;
+}
+.item_account{
+    display: flex;
+    align-items: center;
+ 
+}
+.iconAccount{
+    margin:0 4px;
+}
+.item_account>i{
+    font-size: 25px;
+    margin-right: 4px;
+}
+.link_menu--account{
+    color: var(--logoColor);
+    text-decoration: none;
+    display: flex;
+    padding: 8px 12px;
+}
+
+.list-items:hover .list_menu--account{
+    display: block;
+}
+.list-items:hover 
+{
+    background-color: var(--hoverColor);
+
+}
+
+.list-items>a>i 
+{
+    font-size: 25px;
+    position: relative;
+}
+
+.list-items>a 
+{
+    color: white;
+    text-decoration: none;
+    width: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title_head 
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+#div_logo 
+{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+}
+
+#name_logo 
+{
+    font-size: 150%;
+    height: 100%;
+    width: 200%;
+    color: white;
+    margin-top: 15%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#logo_item 
+{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 1px solid white;
+    margin: 10px 10px 0;
+}
+.w70{
+    width: 70px;
+}
+.w60{
+    width: 60px;
+}
