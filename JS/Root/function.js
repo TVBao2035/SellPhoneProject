@@ -15,13 +15,16 @@ export function closeModal( element, modalElement, linkElement){
 }
 export const renderData = (listData, container)=>{
     let html = "";
+    // Warning::
+    //++++ On GitHub --> https://tvbao2035.github.io/SellPhoneProject/HTML/detailsInformationProductPage.html
+    //++++ On Live Server ---> http://127.0.0.1:5501/HTML/detailsInformationProductPage.html
     listData.map((data)=>{
         html +=`<div class="produce_item">
                     <span class="id_product">${data.id}</span>
                     <div class="produce_info_container">
                         <div class="produce_info">
                             <div class="produce_img">
-                                <img src=${data.img} alt="">
+                                <img class="img_card" src=${data.img} alt="">
                             </div>
                             <p class="produce_name">${data.name}</p>
                             <p class="produce_price">${data.price} đ</p>

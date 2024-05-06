@@ -22,6 +22,11 @@
 .block_image{
     margin-right: 40px;
 }
+.image_product{
+    object-fit: contain;
+    height: 358px;
+    width: 358px;
+}
 .block_details{
     display: flex;
     flex-direction: column;

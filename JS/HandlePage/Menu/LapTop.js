@@ -1,7 +1,7 @@
-import { products } from "../Data/productData.js";
-import { renderData } from "../Root/function.js";
-import handleButtonCard from '../Root/handleButtonCard.js';
-import { handleSlide } from "../Root/handleSlide.js";
+import { products } from "../../Data/productData.js";
+import { renderData } from "../../Root/function.js";
+import handleButtonCard from '../../Root/handleButtonCard.js';
+import { handleSlide } from "../../Root/handleSlide.js";
 var macContainer = document.querySelector('.list_mac');
 var msiContainer = document.querySelector('.list_msi');
 var asusContainer = document.querySelector('.list_asus');
@@ -13,9 +13,9 @@ var listDell = [];
 //------ GET DATA ------
 for(let i=0; i<products.length; i++){
     if(products[i].name.toLowerCase().includes('macbook')) listMac.push(products[i]);
-    if(products[i].name.toLowerCase().includes('msi')) listMSI.push(products[i]);
-    if(products[i].name.toLowerCase().includes('asus')) listASUS.push(products[i]);
-    if(products[i].name.toLowerCase().includes('dell')) listDell.push(products[i]);
+    if(products[i].name.toLowerCase().includes('laptop msi')) listMSI.push(products[i]);
+    if(products[i].name.toLowerCase().includes('laptop asus')) listASUS.push(products[i]);
+    if(products[i].name.toLowerCase().includes('laptop dell')) listDell.push(products[i]);
 
 }
 //------ Render Data ----

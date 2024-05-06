@@ -8,6 +8,5 @@ const Product = new schema({
     img: {type: String},
     exitInCart: {type: Boolean, default: false},
     isLike: {type: Boolean, default: false}
-    
 })
 module.exports = mongoose.model("Product", Product);

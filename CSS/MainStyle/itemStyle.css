@@ -62,12 +62,14 @@
     justify-content: space-around;
 }
 
-.produce_img>img 
+.produce_img>.img_card
 {
     object-fit: contain;
     width: 60%;
     margin-top: 5px;
     margin-bottom: 10px;
+    height: 108px;
+    width: 108px;
 }
 
 .produce_img 
