@@ -1,5 +1,4 @@
 import {primaryColor} from './root.js';
-import host from '../../host.js'
 //----Primary methods-------
 export function openModal(element, modalElement, linkElement){
     modalElement.classList.add('field_open');
@@ -29,7 +28,7 @@ export const renderData = (listData, container)=>{
                         </div>
                         <div class="produce_activity">
                             <div class="button_buy">
-                                <a class="link_page" href="https://tvbao2035.github.io/SellPhoneProject/HTML/detailsInformationProductPage.html"><button type="button">Buy Now</button></a>
+                                <a class="link_page" href="http://127.0.0.1:5501/HTML/detailsInformationProductPage.html"><button type="button">Buy Now</button></a>
                             </div>
 
                             <div class="button_save"></div>
