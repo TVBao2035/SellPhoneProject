@@ -2,6 +2,7 @@ async function getData(){
     return await fetch('http://localhost:8000/user')
     .then(res => res.json())
     .then(data => data)
+    
 }
 
 export const DATA_USERS = await getData();

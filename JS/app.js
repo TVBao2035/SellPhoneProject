@@ -11,7 +11,7 @@ import { handleCardInCard } from "./HandleModal/handleCardInCard.js";
 
 //------- Handle Sigin Account -------
 handleDataSignIn();
-
+console.log(window.location.host);
 //----- Render Items to User-----------
 var containerListProduct = document.getElementById("list_produce");
 

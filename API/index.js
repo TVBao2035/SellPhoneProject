@@ -31,13 +31,14 @@ app.get('/user', (req, res)=>{
 //--- [POST] /user
 app.post('/user', (req, res)=>{
     const user = new User(req.body);
+    console.log(req.hostname);
     user.save();
-    res.redirect('http://127.0.0.1:5500/HTML/formSignIn.html');
+    res.redirect('https://tvbao2035.github.io/SellPhoneProject/HTML/formSignIn.html');
 })
 //--- [POST] /user/update
 app.post('/user/update', (req, res)=>{
     User.updateOne({_id:req.body._id}, req.body)
-    .then(()=> res.redirect('http://127.0.0.1:5500/HTML/userPage.html'))
+    .then(()=> res.redirect('https://tvbao2035.github.io/SellPhoneProject/HTML/userPage.html'))
    
 })
 
