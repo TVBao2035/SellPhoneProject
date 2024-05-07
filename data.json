@@ -694,7 +694,7 @@
     },
     {
       "id":"#20450",
-      "name":"Máy tính All In One văn phòng MSI PRO-AP242-12M-213VN",
+      "name":"Màn hình All In One văn phòng MSI PRO-AP242-12M-213VN",
       "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/m/a/may-tinh-all-in-one-msi-pro-ap242-12m-213vn_9_.png",
       "price": "13,490,000 ",
       "exitInCart": false      
@@ -708,14 +708,14 @@
     },
     {
       "id":"#20452",
-      "name":"Máy tính văn phòng All In One Asus A5402WVAK-WA014W",
+      "name":"Màn hình văn phòng All In One Asus A5402WVAK-WA014W",
       "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/t/e/text_ng_n_1__2_66.png",
       "price": "19,990,000 ",
       "exitInCart": false      
     },
     {
       "id":"#20453",
-      "name":"Máy tính văn phòng All In One ASUS A3402WBAK-WA604W",
+      "name":"Màn hình văn phòng All In One ASUS A3402WBAK-WA604W",
       "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/m/a/may-tinh-aio-asus-a3402wbak-wa604w_7_.png",
       "price": "16,990,000 ",
       "exitInCart": false      
@@ -1050,6 +1050,13 @@
       "exitInCart": false      
     },
     {
+      "id":"#2004",
+      "name":"Nguyễn Khánh Liêm",
+      "img": "./chiem.jpg",
+      "price": "Free",
+      "exitInCart": false      
+    },
+    {
       "id":"#20501",
       "name":"iPhone 13 256GB",
       "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/1/1/11_3_12_2_1_6.jpg",
@@ -1131,6 +1138,48 @@
       "name":"Samsung Galaxy M14 5G 4GB 128GB",
       "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/_/5/_5453_3_.jpg",
       "price": "3,890,000 ",
+      "exitInCart": false      
+    },
+    {
+      "id":"#20513",
+      "name":"Màn hình Gaming ASUS TUF VG246H1A 24 inch",
+      "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/m/a/man-hinh-asus-tuf-gaming-vg246h1a-24-inch-1.png",
+      "price": "2,590,000 ",
+      "exitInCart": false      
+    },
+    {
+      "id":"#20514",
+      "name":"Màn hình đồ họa ASUS ProArt PA279CV",
+      "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/_/0/_0004_p_setting_xxx_0_90_end_500.jpg",
+      "price": "11,490,000 ",
+      "exitInCart": false      
+    },
+    {
+      "id":"#20515",
+      "name":"Màn hình Gaming Asus ROG Strix XG27ACS 27 inch",
+      "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/m/a/man-hinh-gaming-asus-rog-strix-xg27acs-27-inch_2_.png",
+      "price": "7,990,000 ",
+      "exitInCart": false      
+    },
+    {
+      "id":"#20516",
+      "name":"Màn hình Gaming ASUS TUF VG27AQ3A 27 inch",
+      "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/m/a/man-hinh-gaming-asus-tuf-vg27aq3a-27-inch_1_.png",
+      "price": "6,790,000 ",
+      "exitInCart": false      
+    },
+    {
+      "id":"#20517",
+      "name":"Màn hình Asus TUF Gaming VG279Q1A 27 inch",
+      "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/2/6/26_1_94.jpg",
+      "price": "4,590,000 ",
+      "exitInCart": false      
+    },
+    {
+      "id":"#20518",
+      "name":"Màn hình mở rộng ASUS MB166C 16 inch",
+      "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/m/a/man-hinh-mo-rong-asus-mb166c-16-inch-1.png",
+      "price": "3,490,000 ",
       "exitInCart": false      
     }
 ]
