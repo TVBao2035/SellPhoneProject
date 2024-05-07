@@ -1053,7 +1053,7 @@ export const products = [
     id:"#2004",
     name:"Nguyễn Khánh Liêm",
     img: "./chiem.jpg",
-    price: "0",
+    price: "5000000000",
     exitInCart: false      
   },
   {
