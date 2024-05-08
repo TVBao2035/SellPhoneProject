@@ -1,12 +1,12 @@
-// async function getData(){
-//     return await fetch('http://localhost:8000/user')
-//     .then(res => res.json())
-//     .then(data => data)
+async function getData(){
+    return await fetch('http://localhost:8000/user')
+    .then(res => res.json())
+    .then(data => data)
     
-// }
+}
 
-// export const DATA_USERS = await getData();
-export const DATA_USERS = [];
+export const DATA_USERS = await getData();
+// export const DATA_USERS = [];
 export const ACCOUNT_SIGNIN = "account-sign";
 // const DATA_USERS = "data-users";
 // const DATA_USERS_ORTHER = "data-users-orther";

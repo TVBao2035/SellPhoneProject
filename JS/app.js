@@ -13,9 +13,32 @@ import { handleCardInCard } from "./HandleModal/handleCardInCard.js";
 handleDataSignIn();
 
 //----- Render Items to User-----------
-var containerListProduct = document.getElementById("list_produce");
+var containerListProduct = document.getElementById("container_display");
+var containerSmartPhoneList = containerListProduct.querySelector(".display_smartphone .list_produce")
+var containerLapTopList = containerListProduct.querySelector(".display_laptop .list_produce");
+var containerWatchList = containerListProduct.querySelector(".display_watch .list_produce");
 
-renderData(products, containerListProduct)
+var listSmarPhone = [];
+var listLapTop = [];
+var listWatch = [];
+products.forEach((product)=>{
+    if(listSmarPhone.length <= 17){
+        if(product.name.toLowerCase().includes("samsung galaxy a")) listSmarPhone.push(product);
+        if(product.name.toLowerCase().includes("samsung galaxy z")) listSmarPhone.push(product);
+        if(product.name.toLowerCase().includes("samsung galaxy s")) listSmarPhone.push(product);
+        if(product.name.toLowerCase().includes("iphone")) listSmarPhone.push(product);
+    }
+    if(listLapTop.length <= 17){
+        if(product.name.toLowerCase().includes("laptop")) listLapTop.push(product);
+    }
+    if(listWatch.length <= 11){
+        if(product.name.toLowerCase().includes("watch")) listWatch.push(product);
+    }
+})
+
+renderData(listSmarPhone, containerSmartPhoneList)
+renderData(listLapTop, containerLapTopList)
+renderData(listWatch, containerWatchList)
 var listDataProductsAddCart = [];
 
 handleButtonCard(listDataProductsAddCart);

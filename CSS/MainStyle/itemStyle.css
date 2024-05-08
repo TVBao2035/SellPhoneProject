@@ -1,11 +1,10 @@
-
-#produces_logo 
+#container_display 
 {
     width: 100%;
     height: 700px;          
     background-color: white;
     position: relative;
-    top: 110px;
+    top: 25px;
     left: 0;
     display: flex;
     flex-direction: column;
@@ -14,13 +13,12 @@
 
 #title_produce 
 {
-    color: black;
+    color: var(--logoColor);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 10px 20px;
 }
 .id_product{
-    position: absolute;
-    top: -2px;
-    left: -2px;
+    position: relative;
     background-color: var(--logoColor);
     color: white;
     padding: 6px 8px;
@@ -54,7 +52,7 @@
     box-shadow: 0px 0px 10px 5px rgba(255, 0, 0, 0.296);
     transition-delay: 0.2s;
 }
-#list_produce 
+.list_produce 
 {
     display: flex;
     flex-direction: row;
@@ -89,7 +87,7 @@
     flex-direction: column;
 }
 .produce_info{
-    flex: 4;
+    flex: 3;
     position: relative;
 
 }

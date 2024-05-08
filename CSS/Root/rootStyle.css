@@ -2,6 +2,8 @@
     --logoColor: #DF052B;
     --clickChange: #9d9d9d;
     --hoverColor: #fb5151;
+    --slideWidth: 1150px;
+    --slideHeight: 500px;
 }
 
 *{

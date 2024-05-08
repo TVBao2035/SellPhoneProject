@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="./CSS/MainStyle/bannerStyle.css">
         <link rel="stylesheet" href="./CSS/MainStyle/generalStyle.css">
         <link rel="stylesheet" href="./CSS/MainStyle/itemStyle.css">
+        <link rel="stylesheet" href="./CSS/MainStyle/slide.css">
         <link rel="stylesheet" href="./CSS/Responsive/responsiveStyle.css">
     </head>
     <body>
@@ -226,15 +227,48 @@
                     </div> 
                 </div>
             </article>
-
-            <article id="produces_logo">
-                <h2 id="title_produce">Smart Phone</h2>
-                <section id="list_produce">
-                    <!-- Render Here -->
-                </section>
+            <div class="container_slide">
+                <div class="slide">
+                    <div class="list_images">
+                        <img class="img" src="./Images/photo_1.webp" alt="">
+                        <img class="img" src="./Images/photo_2.webp" alt="">
+                        <img class="img" src="./Images/photo_3.webp" alt="">
+                        <img class="img" src="./Images/photo_4.webp" alt="">
+                    </div>
+                    <div class="block_btn--slide">
+                        <div class="btn_left btn"><i class='bx bx-chevron-left' ></i></div>
+                        <div class="btn_right btn"><i class='bx bx-chevron-right'></i></div>
+                    </div>
+                </div>
+                
+            </div>
+            <article id="container_display">
+                <hr style="margin: 9px 0; border: 1px solid red;">
+                <div class="display_smartphone">
+                    <h2 id="title_produce">Smart Phone</h2>
+                    <section class="list_produce">
+                        <!-- Render Here -->
+                    </section>
+                </div>
+                <hr style="margin: 9px 0; border: 1px solid red;">
+                <div class="display_laptop">
+                    <h2 id="title_produce">LapTop</h2>
+                    <section class="list_produce">
+                        <!-- Render Here -->
+                    </section>
+                </div>
+                <hr style="margin: 9px 0; border: 1px solid red;">
+                <div class="display_watch">
+                    <h2 id="title_produce">Watch</h2>
+                    <section class="list_produce">
+                        <!-- Render Here -->
+                    </section>
+                </div>
+                <hr style="margin: 9px 0; border: 1px solid red;">
             </article>
         </main>
         <footer></footer>
     </body>
     <script type="module" src="./JS/app.js"> </script>
+    <script src="./JS/Root/slide.js"></script>
 </html>
