@@ -1,4 +1,4 @@
-@media (max-width: 1000px) 
+/* @media (max-width: 1000px) 
 {
     #nav_menu 
     {
@@ -22,7 +22,7 @@
         bottom: unset;
     }
     /*----Modal Menu----*/
-    .modal_menu{
+ /*   .modal_menu{
         justify-content: unset;
         
     }
@@ -53,16 +53,16 @@
         width: 45%;
     }
     /*-----Modal Call--------*/
-    .modal_button--call{
+ /*   .modal_button--call{
         width: 70%;
         position: unset;
         margin: 10px auto;
     }
     .call_item--link{
         font-size: 17px;
-    }
+    }*/
 
-    /*-----------------------*/
+    /*-----------------------*//*
     .responsive_nav_menu 
     {
         display: block;
@@ -132,7 +132,7 @@
     }
 
 }
-
+ */
 
 
 /*-----------Responsive-------------------------------------*/

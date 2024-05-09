@@ -6,13 +6,13 @@ import handleSearchModal from "./HandleModal/handleSearchModal.js";
 import handleMenuModal from "./HandleModal/handleMenuModal.js";
 import handleContractModal from "./HandleModal/handleContractModal.js";
 import handleCartModal from "./HandleModal/handleCartModal.js";
-import { handleCardInCard } from "./HandleModal/handleCardInCard.js";
+import { handleButtonBuyCardInCart } from "./HandleModal/handleButtonBuyCardInCart.js";
 
 
 //------- Handle Sigin Account -------
 handleDataSignIn();
 
-//----- Render Items to User-----------
+//----- Render Items-----------
 var containerListProduct = document.getElementById("container_display");
 var containerSmartPhoneList = containerListProduct.querySelector(".display_smartphone .list_produce")
 var containerLapTopList = containerListProduct.querySelector(".display_laptop .list_produce");
@@ -21,29 +21,31 @@ var containerWatchList = containerListProduct.querySelector(".display_watch .lis
 var listSmarPhone = [];
 var listLapTop = [];
 var listWatch = [];
+
 products.forEach((product)=>{
+    // GET data smart phone
     if(listSmarPhone.length <= 17){
         if(product.name.toLowerCase().includes("samsung galaxy a")) listSmarPhone.push(product);
         if(product.name.toLowerCase().includes("samsung galaxy z")) listSmarPhone.push(product);
         if(product.name.toLowerCase().includes("samsung galaxy s")) listSmarPhone.push(product);
         if(product.name.toLowerCase().includes("iphone")) listSmarPhone.push(product);
     }
+    // GET data LapTop
     if(listLapTop.length <= 17){
         if(product.name.toLowerCase().includes("laptop")) listLapTop.push(product);
     }
+    // GET data watch
     if(listWatch.length <= 11){
         if(product.name.toLowerCase().includes("watch")) listWatch.push(product);
     }
 })
+// ------ render products ------
+renderData(listSmarPhone, containerSmartPhoneList);
+renderData(listLapTop, containerLapTopList);
+renderData(listWatch, containerWatchList);
 
-renderData(listSmarPhone, containerSmartPhoneList)
-renderData(listLapTop, containerLapTopList)
-renderData(listWatch, containerWatchList)
 var listDataProductsAddCart = [];
-
 handleButtonCard(listDataProductsAddCart);
-
-//--------- handle buttons in item --------
 
 //--------- Handle buttons On Navbar ---------
 var listItems = document.querySelectorAll('.list-items');
@@ -186,7 +188,7 @@ if(index === 3)
             openModal(item, elementCartModal, linkElementCart);
         }
         handleCartModal(listDataProductsAddCart, listCart);
-        handleCardInCard();
+        handleButtonBuyCardInCart();
     }
     
     //-------click to Close------

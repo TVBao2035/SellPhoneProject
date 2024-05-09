@@ -1,11 +1,17 @@
 import { UserField, EmailField, PasswordField, ConfirmPasswordField, Users } from "../Root/objects.js";
-import { DATA_USERS, ACCOUNT_SIGNIN } from "../Data/dataUser.js";
+import { DATA_USERS, ACCOUNT_SIGNIN, ErrorAPI } from "../Data/dataUser.js";
 
 localStorage.setItem(ACCOUNT_SIGNIN, '[]');
 var accountSignIn = JSON.parse(localStorage.getItem(ACCOUNT_SIGNIN));
 //------------ Handle DATA -----------------
 var formSignIn = false;
-console.log(DATA_USERS)
+console.log(DATA_USERS);
+var form = document.querySelector('.form_up')
+if(ErrorAPI){
+    form.action = "./formSignIn.html";
+    form.method = "";
+}
+console.log(ErrorAPI);
 //------ Method check user is valid
 function isValidUser(user, dataUser)
 {
@@ -159,7 +165,7 @@ function Valid(mainElement, classListInput, submitElement)
             //--------- Check this is a form sign in -------------
             if(formSignIn===true)
             {
-                if(!isValidUser(user, DATA_USERS).isSuccess)
+                if(!isValidUser(user, DATA_USERS).isSuccess && !ErrorAPI)
                 {//--- if this is a form sign in, we will check data from fields are valid
                     containInputs.forEach(containInput => {
                         let e_input_form = containInput.querySelector('input');

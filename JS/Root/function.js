@@ -85,9 +85,11 @@ export function addDataToModal(bodyModal, dataId, dataName, dataPrice, dataImg){
     btnBuyProduct.classList.add("dataProducts_btn");
     btnPopProduct.classList.add("dataProducts_button--pop");
     btnBuyProduct.classList.add("dataProducts_button--buy");
-             
+    // Warning::
+    //++++ On GitHub --> https://tvbao2035.github.io/SellPhoneProject/HTML/detailsInformationProductPage.html
+    //++++ On Live Server ---> http://127.0.0.1:5501/HTML/detailsInformationProductPage.html
     btnBuyProduct.innerHTML = `
-                                <a href="./HTML/detailsInformationProductPage.html" class="link_page" >
+                                <a href="http://127.0.0.1:5501/HTML/detailsInformationProductPage.html" class="link_page" >
                                     <i class='bx bx-check'></i>
                                 </a>
                              `;

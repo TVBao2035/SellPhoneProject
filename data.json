@@ -1050,13 +1050,6 @@
       "exitInCart": false      
     },
     {
-      "id":"#2004",
-      "name":"Nguyễn Khánh Liêm",
-      "img": "./chiem.jpg",
-      "price": "Free",
-      "exitInCart": false      
-    },
-    {
       "id":"#20501",
       "name":"iPhone 13 256GB",
       "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/1/1/11_3_12_2_1_6.jpg",

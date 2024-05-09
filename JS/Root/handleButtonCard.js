@@ -2,7 +2,6 @@ import { primaryColor, changeColor } from "../Root/root.js";
 import { products, DATA_DETAILS_PRODUCT } from "../Data/productData.js";
 const handleButtonCard = (listDataProductsAddCart)=>{
     let elementsProduceAct = document.querySelectorAll(".produce_activity");
-
     elementsProduceAct.forEach(e =>{
         let heartBlock = e.querySelector(".heart_item");
         let iconHeart = heartBlock.querySelector("i");

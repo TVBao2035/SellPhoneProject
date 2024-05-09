@@ -33,10 +33,27 @@
     display: flex;
     justify-content: space-between;
 }
-
+.container_search{
+    position: relative;
+    margin-right: 8px;
+    flex: 9;
+    display: flex;
+    align-items: center;   
+}
+.iconDeleteSearchValue{
+    position: absolute;
+    right: 10px;
+    color: var(--logoColor);
+    border-radius: 50%;
+    display: none;
+}
+.iconDeleteSearchValue:active{
+    color: white;
+    background-color: var(--logoColor);
+}
 .input--search 
 {
-    width: 85%;
+    width: 100%;
     padding: 5px;
     transition: all 1s ease;
     background-color: white;
