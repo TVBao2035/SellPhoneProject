@@ -35,15 +35,15 @@ app.post('/user', (req, res)=>{
     // Warning::
     //++++ On GitHub --> https://tvbao2035.github.io/SellPhoneProject/HTML/formSignIn.html
     //++++ On Live Server ---> http://127.0.0.1:5501/HTML/formSignIn.html
-    res.redirect('http://127.0.0.1:5501/HTML/formSignIn.html');
+    res.redirect('https://tvbao2035.github.io/SellPhoneProject/HTML/formSignIn.html');
 })
 //--- [POST] /user/update
 app.post('/user/update', (req, res)=>{
     User.updateOne({_id:req.body._id}, req.body)
     // Warning::
-    //++++ On GitHub --> https://tvbao2035.github.io/SellPhoneProject/HTML/fuserPage.html
+    //++++ On GitHub --> https://tvbao2035.github.io/SellPhoneProject/HTML/userPage.html
     //++++ On Live Server ---> http://127.0.0.1:5501/HTML/userPage.html
-    .then(()=> res.redirect('http://127.0.0.1:5501/HTML/userPage.html'))
+    .then(()=> res.redirect('https://tvbao2035.github.io/SellPhoneProject/HTML/userPage.html'))
    
 })
 
