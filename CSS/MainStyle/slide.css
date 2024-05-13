@@ -52,3 +52,8 @@
     height: var(--slideHeight);
     object-fit: cover;
 }
+@media screen and (max-width: 719px) {
+    .block_btn--slide{
+        font-size: 40px;
+    }
+}

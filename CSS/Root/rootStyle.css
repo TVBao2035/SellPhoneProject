@@ -10,6 +10,8 @@
     margin: 0;
     /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     font-family:"Lato", "Anek Devanagari","Josefin Sans", sans-serif;
+    -webkit-user-select: none;
+    user-select: none;
 
 }
 

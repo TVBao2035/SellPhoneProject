@@ -31,7 +31,7 @@ export const renderData = (listData, container)=>{
                         </div>
                         <div class="produce_activity">
                             <div class="button_buy">
-                                <a class="link_page" href="http://127.0.0.1:5501/HTML/detailsInformationProductPage.html"><button type="button">Buy Now</button></a>
+                                <a class="link_page" href="https://tvbao2035.github.io/SellPhoneProject/HTML/detailsInformationProductPage.html"><button type="button">Buy Now</button></a>
                             </div>
 
                             <div class="button_save"></div>
@@ -89,7 +89,7 @@ export function addDataToModal(bodyModal, dataId, dataName, dataPrice, dataImg){
     //++++ On GitHub --> https://tvbao2035.github.io/SellPhoneProject/HTML/detailsInformationProductPage.html
     //++++ On Live Server ---> http://127.0.0.1:5501/HTML/detailsInformationProductPage.html
     btnBuyProduct.innerHTML = `
-                                <a href="http://127.0.0.1:5501/HTML/detailsInformationProductPage.html" class="link_page" >
+                                <a href="https://tvbao2035.github.io/SellPhoneProject/HTML/detailsInformationProductPage.html" class="link_page" >
                                     <i class='bx bx-check'></i>
                                 </a>
                              `;
