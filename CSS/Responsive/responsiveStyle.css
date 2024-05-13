@@ -1,3 +1,219 @@
+
+
+@media screen and (max-width: 1023px) and (min-width: 720px) {
+    :root{
+        --slideWidth: 550px;
+        --slideHeight: 240px;
+    }
+    #bannerHead 
+    {
+        height: 140px;
+        align-items: center;
+    }
+    #nav_menu{
+        display: flex;
+        position: absolute;
+        right: -400px;
+        align-items: start;
+        width: 400px;
+        height: 1000px;
+        top: 140px;
+        transition: all 1s ease;
+        background-color: white;
+    }
+    .responsive_nav_menu{
+        display: block;
+        margin-right: 20px;
+    }
+    #ul_bannerHead 
+    {  
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 21px;
+        flex-direction: column;
+        width: 100%;
+        height: 300px;
+        padding: 5px;
+        justify-content: space-around;
+        bottom: unset;
+    }
+    .list-items{
+        border-radius: 0;
+        margin: 0;
+    }
+    .container_slide{
+        margin-top: 174px;
+    }
+    .modal_search, .modal_menu, .modal_call, .modal_cart{
+        top: 140px;
+    }
+    .modal_button_search{
+        height: 50%;
+    }
+    .list_menu--account{
+        left: 210px;
+    }
+
+}
+
+
+@media  screen and (max-width: 719px) {
+    :root{
+        --slideWidth: 350px;
+        --slideHeight: 200px;
+    }
+    #bannerHead 
+    {
+        width: 100%;
+        height: 100px;
+        align-items: center;
+    }
+    #nav_menu{
+        display: flex;
+        position: absolute;
+        right: -400px;
+        align-items: start;
+        width: 200px;
+        height: 1000px;
+        top: 100px;
+        transition: all 1s ease;
+        background-color: white;
+        box-shadow: 0 1px 2px 0 rgba(60,64,67, 0.1), 0px 2px 6px 2px rgba(60,64, 67, 0.2);
+
+    }
+    .responsive_nav_menu{
+        display: flex;
+    }
+    .list-items{
+        border-radius: 0;
+        margin: 0;
+        font-size: 10px;
+        padding: 4px;
+    }
+    .list-items>.item_account>i{
+        font-size: 16px;
+    }
+    .list-items>a{
+        justify-content: start;
+    }
+    .list-items>a>i{
+        font-size: 16px;
+    }
+    .responsive_nav_menu{
+        display: block;
+        margin-right: 20px;
+    }
+    #ul_bannerHead 
+    {  
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 21px;
+        flex-direction: column;
+        width: 100%;
+        height: 200px;
+        padding: 5px;
+        justify-content: space-around;
+        bottom: unset;
+    }
+    #div_logo{
+        margin-left: 10px;
+    }
+    #name_logo{
+        font-size: 20px;
+    }
+    #logo_item{
+        height: 50px;
+        width: 50px;
+    }
+    .list_produce{
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    .modal_search, .modal_menu, .modal_call, .modal_cart{
+        top: 100px;
+    }
+    .modal_search--header, .modal_search--footer{
+        width: 90%;
+    }
+    .input--search{
+        font-size: 10px;
+    }
+    .button_style{
+        padding: 3px 6px;
+        font-size: 10px;
+    }
+    
+    .dataProducts_contain{
+        font-size: 10px;
+    }
+    .dataProducts_style{
+        padding: 2px;
+    }
+    .dataProducts_contain:hover .dataProducts_style{
+        justify-content: start;
+    }
+    .dataProducts_contain:hover span{
+        margin-right: 5px;
+    }
+    .dataProducts_btn{
+        height: 20px;
+        width: 20px;
+    }
+    .dataProducts_button--buy a i, .dataProducts_button--pop i {
+        font-size: 20px;
+        right: 8px;
+        align-items: center;
+    }
+    .modal_button--call{
+        width: 90%;
+        left: 6%;
+        height: 350px;
+    }
+    .modal_call--header{
+        font-size: 20px;
+    }
+    .modal_call--body{
+        height: 200px;
+    }
+    
+    .call_item--name{
+        font-size: 16px;
+    }
+    .modal_button--menu{
+        width: 75%;
+        height: 400px;
+    }
+    .modal_menu--header{
+        font-size: 20px;
+    }
+    .modal_menu--body{
+        height: 295px;
+    }
+    .menu_link--page{
+        padding: 4px;
+        font-size: 13px;
+    }
+    .menu_item--name img{
+        height: 18px;
+        width: 18px;
+    }
+    .modal_button_cart{
+        height: 470px;
+    }
+    .modal_cart--header{
+        font-size: 20px;
+    }
+    .modal_cart--footer{
+        width: 90%;
+    }
+    .list_menu--account{
+        left: 14px;
+        top: 27px;
+    }
+}
 /* @media (max-width: 1000px) 
 {
     #nav_menu 

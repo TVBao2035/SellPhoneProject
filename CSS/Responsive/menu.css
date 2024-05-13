@@ -1,0 +1,21 @@
+@media screen and (min-width: 740px) and (max-width: 1023px) {
+    .container{
+        width: 100%;
+    }
+    .main{
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 719px) {
+    .container{
+      width: 100%;
+    }
+    .main{
+      padding: 20px 5px;
+    }
+    .block_btn{
+        width: 50px;
+        height: 150px;
+    }
+  }

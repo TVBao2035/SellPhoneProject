@@ -220,19 +220,21 @@ if(index === 3)
 //--------------------Modal Menu responsive-------------------
 var responsiveMenu = document.querySelector(".responsive_nav_menu");
 var modalMenu = document.querySelector("#nav_menu");
-var bannerHead = document.querySelector("#bannerHead");
+var isClicked = false;
 responsiveMenu.innerHTML = "<i class='bx bx-menu'></i>";
 
 responsiveMenu.onclick = ()=>{
-    if(modalMenu.style.display === 'flex')
-    {
-        modalMenu.style.display = 'none';   
-        responsiveMenu.innerHTML = "<i class='bx bx-menu'></i>";        
+    if(isClicked)
+    { 
+        responsiveMenu.innerHTML = "<i class='bx bx-menu'></i>";   
+        modalMenu.style.right = '-400px';     
+        isClicked = false;
     }
     else
     {
-        modalMenu.style.display = 'flex';
         responsiveMenu.innerHTML = "<i class='bx bx-x'></i>";
+        modalMenu.style.right = '0px';     
+        isClicked = true;
     }  
 }
 

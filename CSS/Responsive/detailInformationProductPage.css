@@ -1,0 +1,43 @@
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .container{
+    width: 100%;
+  }
+  .container>main{
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .container{
+    width: 100%;
+  }
+  .container>main{
+    padding: 80px 10px;
+  }
+  .block_image{
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .image_product{
+    height: 150px;
+    width: 150px;
+  }
+  .block_infor{
+    font-size: 10px;
+    gap: 30px;
+  }
+  .block_btn{
+    margin-top: 10px;
+  }
+  .btn{
+    font-size: 10px;
+    width: 80px;
+    height: 35px;
+    margin: 0 5px;
+  }
+  .btnClose{
+    padding: 8px 24px;
+  }
+  
+}
