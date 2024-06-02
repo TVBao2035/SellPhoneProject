@@ -1,19 +1,17 @@
 
-async function fetchProduct(){
-  return fetch('https://tvbao2035.github.io/SellPhoneProject/data.json').then(res=>res.json()).then(data=>data)
-
-}
-const virtualProducts = await fetchProduct()
 
 async function getData(){
 
     return fetch('http://localhost:8000/product')
     .then(res => res.json())
     .then(data => data)
-    .catch(()=>virtualProducts)
+    .catch(()=>{
+      console.log("Error Sever!!!!")
+    })
 
   
 }
 export const DATA_DETAILS_PRODUCT = 'data-details-product';
+export const DATA_ITEM_CART = 'data-item-cart';
 
 export const products = await getData();

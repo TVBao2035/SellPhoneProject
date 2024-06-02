@@ -65,7 +65,7 @@ footer a:hover{
 }
 .form_input{
     height: 80px;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -94,6 +94,7 @@ footer a:hover{
     color: #333;
     font-size: 11px;
     font-weight: 100;
+    height: 10px;
     font-family:  sans-serif;
     position: absolute;
     bottom: -10px;
@@ -102,7 +103,7 @@ footer a:hover{
 .form_submit{
     display: flex;
     justify-content: center;
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
 

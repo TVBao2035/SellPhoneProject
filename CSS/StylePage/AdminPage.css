@@ -1,0 +1,89 @@
+header{
+    width: 100%;
+    height: 100px;
+    background-color: var(--logoColor);
+    margin-bottom: 50px;
+}
+table{
+    width: 100%;
+}
+tr:hover{
+    background-color: #0000005c;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px 8px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+}
+.icon_back{
+    margin-left: 20px;
+}
+.icon_back>a{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.modal{
+    background-color: #0000003b;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+}
+
+.container{
+    background-color: white;
+    margin: 100px auto;
+    width: 90%;
+    height: 400px;
+}
+
+.container_header{
+    text-align: end;
+    font-size: 24px;
+    margin-right: 10px;
+}
+.row{
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.row label{
+    flex: 1;
+    text-align: end;
+    margin-right: 20px;
+}
+.row input{
+    flex: 4;
+}
+.row button{
+    margin: 40px auto;
+}
+
+.modal_delete .container{
+    width: 60%;
+    height: 150px;
+    margin: 300px auto;
+}
+.modal_delete .container_main{
+    text-align: center;
+}
+
+.modal_delete .container_main .message{
+    display: flex;
+    justify-content: center;
+    font-weight: 600 ;
+}
+.modal_delete .container_main>button{
+    margin: 20px 20px 0 0 ;
+}

@@ -6,10 +6,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="../CSS/Root/rootStyle.css">
     <link rel="stylesheet" href="../CSS/StylePage/formStyle.css">
-    <link rel="stylesheet" href="../../CSS/Responsive/menu.css">
+    <link rel="stylesheet" href="../CSS/Responsive/menu.css">
 </head>
 <body>
-    <form action="../index.html" class="form_sign">
+    <form action="http://localhost:8000/user/check" method="POST" class="form_sign">
         <div class="form_contain--main">
             <header>
                 <span>Sign in</span>
@@ -17,12 +17,12 @@
             <main>
                 <div class="form_input">
                     <label for="#input_email">User Name or Email Address</label>
-                    <input id="input_email" placeholder="Enter Name" type="text">
+                    <input name='email' id="input_email" placeholder="Enter Name" type="text">
                     <span title="email"></span>
                 </div>
                 <div class="form_input">
                     <label for="">Password</label>
-                    <input placeholder="Enter Password" type="password">
+                    <input placeholder="Enter Password" type="password" name="password">
                     <span title="password"></span>
                 </div>
                 <div  class="form_submit">

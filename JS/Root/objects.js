@@ -39,15 +39,15 @@ class EmailField extends FieldForm{
 }
 
 class PasswordField extends FieldForm{
-    constructor(message, type, isSuccess, length) {
+    constructor(message, type, isSuccess, maxLength) {
         super(message, type, isSuccess);
-        this.length = length;
+        this.maxLength = maxLength;
     }
 }
 
-class ConfirmPasswordField extends PasswordField{
-    constructor(message, type, isSuccess, length) {
-        super(message, type, isSuccess, length);
+class ConfirmPasswordField extends FieldForm{
+    constructor(message, type, isSuccess) {
+        super(message, type, isSuccess);
     }
 }
 

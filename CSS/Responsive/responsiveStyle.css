@@ -63,6 +63,33 @@
         --slideWidth: 350px;
         --slideHeight: 200px;
     }
+    .container_card--detail{
+        margin: 8% auto;
+    }
+    .card_detail {
+        padding: 12px 0px;
+        border-radius: 12px;
+        height: 100px;
+    }
+    .card_image {
+        font-size: 34px;
+
+    }
+    .card_content{
+        font-size: 14px;
+    }
+    .card_menu--content{
+        font-size: 18px;
+        font-weight: 300;
+    }
+    .container_card--menu{
+        gap: 20px;
+    }
+    .card_menu{
+        height: 230px;
+        width: 200px;
+        padding: 15px 20px;
+    }
     #bannerHead 
     {
         width: 100%;

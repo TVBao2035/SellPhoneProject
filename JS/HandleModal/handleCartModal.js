@@ -1,58 +1,63 @@
-import { addDataToModal } from "../Root/function.js";
+import { addDataToModal, renderItemCart } from "../Root/function.js";
 import { products } from "../Data/productData.js";
-const handleCartModal = (listDataProductsAddCart, listCart)=>{
+import { DATA_ITEM_CART } from "../Data/productData.js";
+
+const handleCartModal = (listDataProductsAddCart, cartList)=>{
     //---elements of modal cart----------
     let elementCartModal = document.querySelector(".modal_cart");
     let bodyCartModal = elementCartModal.querySelector('.modal_cart--body'); 
-    let elementsProduceAct = document.querySelectorAll(".produce_activity");   
-    if(listDataProductsAddCart.length === 0 &&  listCart.length === 0 ) 
-    alert("There is no any products");           
-else
+    let elementsProduceAct = document.querySelectorAll(".produce_activity"); 
+   
+    if(listDataProductsAddCart.length === 0 &&  cartList.length === 0 ) 
+        alert("There is no any products");           
+    else
     {// upload data on the cart when click
-        const indexFirstElement = 0;
-        while(indexFirstElement < listDataProductsAddCart.length)
-        {     
+        const firstElementIndex = 0;
+        while(firstElementIndex < listDataProductsAddCart.length)
+        {   
             //check is the first product of listDataProductsAddCart in arrayName ?            
-            if(listCart.includes(listDataProductsAddCart[indexFirstElement].Id))
+            if(cartList.includes(listDataProductsAddCart[firstElementIndex]))
             {
                 listDataProductsAddCart.shift();
                 continue;
             }
-            
-            //-----add data to bodyModal------
-            let dataId = listDataProductsAddCart[indexFirstElement].Id;
-            let dataName = listDataProductsAddCart[indexFirstElement].Name;
-            let dataPrice = listDataProductsAddCart[indexFirstElement].Price;
-            let dataImg = listDataProductsAddCart[indexFirstElement].Image;
-            
-            //add product to Map and array save name and add to modal cart
-            // listProductsExist.set(dataName, dataId);
-            listCart.push(dataId);
-            // arrayName.push(dataName);
-            addDataToModal(bodyCartModal, dataId, dataName, dataPrice, dataImg);
-            
-            //delete product out of listDataProductsAddCart
+            cartList.push(listDataProductsAddCart[firstElementIndex]);
             listDataProductsAddCart.shift();
         }
-    }     
+        localStorage.setItem(DATA_ITEM_CART,JSON.stringify(cartList));
+        // resetCart(bodyCartModal);
+        renderItemCart(cartList, bodyCartModal);
+        // if(cartList.length != 0){
+        //     cartList.forEach(itemId => {
+        //         let item = products.find((product) => product.id === itemId);
+        //         addDataToModal(bodyCartModal, item.id, item.name, item.price,  item.img);
+        //     })
+
+        // }
+    }
     
- 
+    
     //---------delete Products saved out cart---------------
+    let idList = [];
+    elementsProduceAct.forEach((e)=>{
+        idList.push(e.parentElement.parentElement.querySelector(".id_product").textContent)
+
+    })
     var deleteProductsSaved = bodyCartModal.querySelectorAll('.dataProducts_button--pop');
     deleteProductsSaved.forEach((element)=>{
         element.onclick = ()=>{             
             let productID = element.parentElement.previousElementSibling.firstChild.firstChild.textContent;
-            let indexOfProduct = products.findIndex((e)=>e.id === productID);
-            let indexOfCart = listCart.findIndex((e)=>e === productID);
+            let indexOfProduct = idList.findIndex((e)=>e === productID);
+            let indexOfCart = cartList.findIndex((e)=>e === productID);
             //------change check icon to cart icon
-            elementsProduceAct[indexOfProduct].querySelector(".button_save").innerHTML = "<i class='bx bx-cart-alt'></i>";
-            listCart.splice(indexOfCart, 1);
+            elementsProduceAct[indexOfProduct].querySelector(".button_save").innerHTML ='<lottie-player src="./cartAnimation.json" background="#ffffff00"  speed="1"   style=" margin-left: 8px; width: 60px; height: 80px; position: absolute; top: -26px; left: -17px;"  loop  autoplay muted></lottie-player>';
+            cartList.splice(indexOfCart, 1);
             //--------pop product out cart
             bodyCartModal.removeChild(element.parentElement.parentElement);
            //-------design nav css style. 
+           localStorage.setItem(DATA_ITEM_CART,JSON.stringify(cartList));
         }
     })
-                
 }
 
 export default handleCartModal;

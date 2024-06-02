@@ -25,6 +25,6 @@ var config = {
 
 
 
-var conn = new sql.ConnectionPool(config).connect().then(pool=>pool).catch(err=>{console.log(err)});
+var connect = new sql.ConnectionPool(config).connect().then(pool=>pool).catch(err=>{console.log(err)});
 
-module.exports = {conn: conn}
+module.exports = {connect: connect}

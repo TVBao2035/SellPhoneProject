@@ -5,9 +5,9 @@ const User = new schema({
     name: {type: String, require},
     email: {type: String, require},
     password: {type: String, require},
-    items: {type: Array, default: []},
     idOfUser: {type: String},
-    phone: {type:String}
+    phone: {type:String},
+    items: {type: Array, default: []}
 })
 
 

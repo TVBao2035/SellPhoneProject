@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admine Page</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../../CSS/Root/rootStyle.css">
+    <link rel="stylesheet" href="../../CSS/StylePage/AdminPage.css">
+
+</head>
+<body>
+    <div class="modal modal_user--update">
+        <div class="container">
+            <div class="container_header">
+                <i onclick="handleCloseModal('.modal_user--update')" class='bx bx-x icon_close'></i>
+            </div>
+            <form action="" method="post">
+                <div class="row"><label for="">Account ID:</label><input style="background-color: #33333325; " name="_id" type="text" readonly ></div>
+                <div class="row"><label for="">User ID:</label><input style="background-color: #33333325;" name="idOfUser" type="text" readonly></div>
+                <div class="row"><label for="">Email:</label><input name="email" type="email"></div>
+                <div class="row"><label for="">Name:</label><input name="name" type="text"></div>
+                <div class="row"><label for="">Phone:</label><input name="phone" type="text"></div>
+                <div class="row">
+                    <button onclick="handleSubmit('user', 'update')">Update</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+
+    <div class="modal modal_user--delete  modal_delete">
+        <div class="container">
+            <div class="container_header">
+                <i onclick="handleCloseModal('.modal_user--delete')" class='bx bx-x icon_close'></i>
+            </div>
+            <div class="container_main">
+                <div class="message">
+                    <p></p> <p class="id_user"></p>
+                </div>
+                <button onclick="handleDelete('user')">Accept</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal modal_product--update">
+        <div class="container">
+            <div class="container_header">
+                <i onclick="handleCloseModal('.modal_product--update')" class='bx bx-x icon_close'></i>
+            </div>
+            <form action="" method="post">  
+                <div class="row"><label for="">ID Of Items:</label><input style="background-color: #33333325; " name="_id" type="text" readonly ></div>
+                <div class="row"><label for="">ID:</label><input style="background-color: #33333325; " name="id" type="text" readonly ></div>
+                <div class="row"><label for="">Name:</label><input name="name" type="text"></div>
+                <div class="row"><label for="">Image:</label><input name="img" type="text"></div>
+                <div class="row"><label for="">Price:</label><input name="price" type="text"></div>
+                <div class="row">
+                    <button onclick="handleSubmit('product', 'update')">Update</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    <div class="modal modal_product--create">
+        <div class="container">
+            <div class="container_header">
+                <i onclick="handleCloseModal('.modal_product--create')" class='bx bx-x icon_close'></i>
+            </div>
+            <form action="" method="post">  
+                <div class="row"><label for="">ID:</label><input name="id" type="text" ></div>
+                <div class="row"><label for="">Name:</label><input name="name" type="text"></div>
+                <div class="row"><label for="">Image:</label><input name="img" type="text"></div>
+                <div class="row"><label for="">Price:</label><input name="price" type="text"></div>
+                <div class="row">
+                    <button onclick="handleSubmit('product', 'create')">Create</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    <div class="modal modal_product--delete modal_delete">
+        <div class="container">
+            <div class="container_header">
+                <i onclick="handleCloseModal('.modal_product--delete')" class='bx bx-x icon_close'></i>
+            </div>
+            <div class="container_main">
+                <div class="message">
+                    <p></p> <p class="id_product"></p>
+                </div>
+                <button onclick="handleDelete('product')">Accept</button>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="icon_back">
+            <a href="../../index.html"><i class='bx bx-arrow-back iconBack'></i><p>Back</p></a>
+        </div>
+    </header>
+    <h1>USER MANAGER </h1>
+    <table class="container_users">
+        <tr>
+            <th>Accound Id</th>
+            <th>User Id</th>
+            <th>Email</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th style="width: 20%;"></th>
+        </tr>
+    </table>
+    <hr  style="margin: 20px; color: var(--logoColor);">
+    <h1 style="display: flex; margin: 20px 0;">PRODUCT MANAGER <button onclick="handleData('','create','product')" style="margin-left: 20px;">Create Product</button> </h1>
+    <table style="width: 100%;" class="container_products">
+        
+            <tr>
+                <th>Id</th>
+                <th style="width: 10%;">Image</th>
+                <th style="width: 50%;">Name</th>
+                <th style="width: 10%;">Price</th>
+                <th style="width: 20%;"></th>
+            </tr>
+
+    </table>
+   
+</body>
+    <script type="module" src="../../JS/HandlePage/AdminPage.js">
+      
+    </script>
+    <script src="../../JS/HandlePage/handleData.js"></script>
+</html>

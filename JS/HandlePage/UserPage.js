@@ -25,7 +25,11 @@ if(data.length !== 0) {
     //Event btn Update
     btnUpdate.onclick = ()=>{
         listInputFields.forEach(inputField =>{
-            inputField.readOnly= false;
+            if(inputField.name !== '_id' && inputField.name !== 'email'){
+                inputField.readOnly= false;
+            }else{
+                inputField.classList.add('read-only');
+            }
             inputField.classList.add("update_input")
         });
         rows.forEach(row=>row.classList.add("row-flex"))
@@ -51,7 +55,7 @@ if(data.length !== 0) {
         listInputFields.forEach(inputField => {
             inputField.readOnly=true;
             inputField.classList.remove('update_input');
-            
+            inputField.classList.remove('read-only');
         });
         rows.forEach(row=>row.classList.remove("row-flex"))
         btnSave.style.display = 'none';

@@ -26,12 +26,14 @@ const handleButtonCard = (listDataProductsAddCart)=>{
                 isLiked = true;
                 iconHeart.style.color = primaryColor;
                 this.style.color= primaryColor;
+                iconHeart.style.animationName = 'none';
             }
             else
             {
                 isLiked = false;
                 iconHeart.style.color = changeColor;
                 this.style.color= changeColor;
+                iconHeart.style.animationName = 'heartRate';
             }
         }
 
@@ -39,22 +41,16 @@ const handleButtonCard = (listDataProductsAddCart)=>{
         let dataProduct = {};
         let informationProduct = e.previousElementSibling;
         let buttonSaveElement = e.querySelector(".button_save");
-        buttonSaveElement.innerHTML = "<i class='bx bx-cart-alt'></i>";
-
-        buttonSaveElement.onclick = ()=>{
+        //buttonSaveElement.innerHTML = "<i class='bx bx-cart-alt'></i>";
+        buttonSaveElement.innerHTML ='<lottie-player src="./cartAnimation.json" background="#ffffff00"  speed="1"   style=" margin-left: 8px; width: 60px; height: 80px; position: absolute; top: -26px; left: -17px;"  loop  autoplay muted></lottie-player>';
+        buttonSaveElement.onclick = (element)=>{
             let idProduct = e.parentElement.previousElementSibling.textContent;
-            let nameProduct = informationProduct.querySelector('.produce_name').textContent;
-            let priceProduct = informationProduct.querySelector('.produce_price').textContent;
-            let imageProduct = informationProduct.querySelector('.produce_img img').src;
             buttonSaveElement.innerHTML = "<i class='bx bx-check'></i>";
             buttonSaveElement.querySelector("i").style.color = 'red';
-            dataProduct = {
-                'Id' : idProduct,
-                "Image":imageProduct,
-                'Name' : nameProduct,
-                'Price' : priceProduct
-            }
-        listDataProductsAddCart.push(dataProduct);
+            
+            listDataProductsAddCart.push(idProduct);
+            console.log(listDataProductsAddCart);
+           
         }
     })
 }

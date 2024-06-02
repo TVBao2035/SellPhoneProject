@@ -1,12 +1,14 @@
 import { openModal, closeModal, renderData} from "./Root/function.js";
-import {products} from './Data/productData.js';
+import {DATA_ITEM_CART, products} from './Data/productData.js';
 import handleDataSignIn  from "./HandleModal/handleDataSignIn.js";
+import handleDataSignOut from "./HandleModal/handleDataSignOut.js";
 import handleButtonCard  from "../JS/Root/handleButtonCard.js";
 import handleSearchModal from "./HandleModal/handleSearchModal.js";
 import handleMenuModal from "./HandleModal/handleMenuModal.js";
 import handleContractModal from "./HandleModal/handleContractModal.js";
 import handleCartModal from "./HandleModal/handleCartModal.js";
 import { handleButtonBuyCardInCart } from "./HandleModal/handleButtonBuyCardInCart.js";
+import { ACCOUNT_SIGNIN } from "./Data/dataUser.js";
 
 
 //------- Handle Sigin Account -------
@@ -173,9 +175,12 @@ if(index === 2)
 //----------Modal Cart------
 if(index === 3)
 {
-    //----- Element Store Data In Cart -------
-    let listCart = [];
-
+    let cartList;
+    if(JSON.parse(localStorage.getItem(ACCOUNT_SIGNIN)).length!==0){
+        cartList= JSON.parse(localStorage.getItem(ACCOUNT_SIGNIN))[0].items;
+    }else{
+        cartList = [];
+    }
     let linkElementCart = item.querySelector('a');
     let elementCartModal = document.querySelector(".modal_cart");
     let iconCloseCart = elementCartModal.querySelector("i");
@@ -183,11 +188,12 @@ if(index === 3)
     
     //-------Click to Open------------
     item.onclick = ()=>{
+       
         if(!isOpen){
             isOpen = true;
             openModal(item, elementCartModal, linkElementCart);
         }
-        handleCartModal(listDataProductsAddCart, listCart);
+        handleCartModal(listDataProductsAddCart, cartList);
         handleButtonBuyCardInCart();
     }
     
@@ -214,6 +220,7 @@ if(index === 3)
             }
         }
     }
+
 }   
 })
 
@@ -238,6 +245,16 @@ responsiveMenu.onclick = ()=>{
     }  
 }
 
+     
+let itemSignOut = document.querySelector(".list_menu--account").querySelector('.itemAccount');
 
+itemSignOut.onclick = async ()=> await handleDataSignOut(JSON.parse(localStorage.getItem(DATA_ITEM_CART)));
+
+
+
+var dataUser = JSON.parse(localStorage.getItem(ACCOUNT_SIGNIN))
+console.log(dataUser);
+// var formMain =  document.getElementById('form_main');
+// formMain.action =  `http://localhost:8000/cart/${datauser[0]._id}/save/`;
 
 

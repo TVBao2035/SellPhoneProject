@@ -77,3 +77,8 @@
     border: 1px solid var(--logoColor);
     box-shadow: rgba(60, 64, 67, 0.1) 0px 1px 0px 0px, rgba(60, 64, 67, 0.2) 6px 3px 8px 1px;
 }
+
+.read-only{
+    background-color: #04040443;
+    color: #ffffff;
+}

@@ -1,4 +1,5 @@
 import {primaryColor} from './root.js';
+import {products} from '../Data/productData.js'
 //----Primary methods-------
 export function openModal(element, modalElement, linkElement){
     modalElement.classList.add('field_open');
@@ -31,10 +32,11 @@ export const renderData = (listData, container)=>{
                         </div>
                         <div class="produce_activity">
                             <div class="button_buy">
-                                <a class="link_page" href="https://tvbao2035.github.io/SellPhoneProject/HTML/detailsInformationProductPage.html"><button type="button">Buy Now</button></a>
+                                <a class="link_page" href=" http://127.0.0.1:5501/HTML/detailsInformationProductPage.html"><button type="button">Buy Now</button></a>
                             </div>
 
-                            <div class="button_save"></div>
+                            <button class="button_save"  name="idItem"  value="${data.id}" >
+                            </button>
 
                             <div id="dd" class="heart_item">
                                 <i class='bx bxs-heart' ></i>Like
@@ -43,6 +45,25 @@ export const renderData = (listData, container)=>{
                     </div>
                 </div>`});
     container.innerHTML = html ;
+}
+
+export function resetCart(bodyModal){
+    let items =  bodyModal.querySelectorAll(".dataProducts_contain");
+    if(items.length !== 0){
+       for(let i=0; i<items.length; i++){
+        bodyModal.removeChild(items[i]);
+       }
+    }
+}
+
+export function renderItemCart(cartList, bodyCartModal){
+    resetCart(bodyCartModal);
+    if(cartList.length != 0){
+        cartList.forEach(itemId => {
+            let item = products.find((product) => product.id === itemId);
+            addDataToModal(bodyCartModal, item.id, item.name, item.price,  item.img);
+        })
+    }
 }
 export function addDataToModal(bodyModal, dataId, dataName, dataPrice, dataImg){
     var containProductSaved = document.createElement('div');
@@ -89,7 +110,7 @@ export function addDataToModal(bodyModal, dataId, dataName, dataPrice, dataImg){
     //++++ On GitHub --> https://tvbao2035.github.io/SellPhoneProject/HTML/detailsInformationProductPage.html
     //++++ On Live Server ---> http://127.0.0.1:5501/HTML/detailsInformationProductPage.html
     btnBuyProduct.innerHTML = `
-                                <a href="https://tvbao2035.github.io/SellPhoneProject/HTML/detailsInformationProductPage.html" class="link_page" >
+                                <a href="http://127.0.0.1:5501/HTML/detailsInformationProductPage.html" class="link_page" >
                                     <i class='bx bx-check'></i>
                                 </a>
                              `;
