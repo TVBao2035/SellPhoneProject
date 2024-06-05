@@ -171,12 +171,12 @@ function Valid(mainElement, classListInput, submitElement)
                         let e_span_form = containInput.querySelector('span');
 
                         //---- the fields are not valid, it will notification error
-                        if(!isValidUser(user, DATA_USERS).emailError 
+                        if(!isValidUser(user, DATA_USERS).emailExist 
                             && e_span_form.title === email_field.type)
                         {
                             isNotValid(e_input_form, e_span_form, email_field, "Email is not exist!");
                         }
-                        if(!isValidUser(user, DATA_USERS).passwordError 
+                        if(isValidUser(user, DATA_USERS).passwordError 
                             && e_span_form.title === password_field.type)
                         {
                             isNotValid(e_input_form, e_span_form, password_field);   
