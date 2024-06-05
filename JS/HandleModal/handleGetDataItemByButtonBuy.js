@@ -1,5 +1,5 @@
 import {products, DATA_DETAILS_PRODUCT} from '../Data/productData.js ';
-export const handleButtonBuyCardInCart = ()=>{
+export const handleGetDataItemByButtonBuy = ()=>{
     let btnBuy = document.querySelectorAll(".dataProducts_button--buy");
     localStorage.setItem(DATA_DETAILS_PRODUCT, '[]');
     btnBuy.forEach((btn)=>{

@@ -25,15 +25,9 @@ const handleCartModal = (listDataProductsAddCart, cartList)=>{
             listDataProductsAddCart.shift();
         }
         localStorage.setItem(DATA_ITEM_CART,JSON.stringify(cartList));
-        // resetCart(bodyCartModal);
+       
         renderItemCart(cartList, bodyCartModal);
-        // if(cartList.length != 0){
-        //     cartList.forEach(itemId => {
-        //         let item = products.find((product) => product.id === itemId);
-        //         addDataToModal(bodyCartModal, item.id, item.name, item.price,  item.img);
-        //     })
-
-        // }
+      
     }
     
     

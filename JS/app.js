@@ -7,7 +7,7 @@ import handleSearchModal from "./HandleModal/handleSearchModal.js";
 import handleMenuModal from "./HandleModal/handleMenuModal.js";
 import handleContractModal from "./HandleModal/handleContractModal.js";
 import handleCartModal from "./HandleModal/handleCartModal.js";
-import { handleButtonBuyCardInCart } from "./HandleModal/handleButtonBuyCardInCart.js";
+import { handleGetDataItemByButtonBuy } from "./HandleModal/handleGetDataItemByButtonBuy.js";
 import { ACCOUNT_SIGNIN } from "./Data/dataUser.js";
 
 
@@ -177,7 +177,8 @@ if(index === 3)
 {
     let cartList;
     if(JSON.parse(localStorage.getItem(ACCOUNT_SIGNIN)).length!==0){
-        cartList= JSON.parse(localStorage.getItem(ACCOUNT_SIGNIN))[0].items;
+        cartList = JSON.parse(localStorage.getItem(ACCOUNT_SIGNIN))[0].items ? JSON.parse(localStorage.getItem(ACCOUNT_SIGNIN))[0].items: [];
+
     }else{
         cartList = [];
     }
@@ -194,7 +195,7 @@ if(index === 3)
             openModal(item, elementCartModal, linkElementCart);
         }
         handleCartModal(listDataProductsAddCart, cartList);
-        handleButtonBuyCardInCart();
+        handleGetDataItemByButtonBuy();
     }
     
     //-------click to Close------

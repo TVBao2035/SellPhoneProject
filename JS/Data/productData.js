@@ -6,7 +6,8 @@ async function getData(){
     .then(res => res.json())
     .then(data => data)
     .catch(()=>{
-      console.log("Error Sever!!!!")
+      console.log("Error Sever!!!!");
+      return virtualData;
     })
 
   

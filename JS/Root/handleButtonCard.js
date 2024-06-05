@@ -1,4 +1,4 @@
-import { primaryColor, changeColor } from "../Root/root.js";
+import { primaryColor, changeColor } from "./root.js";
 import { products, DATA_DETAILS_PRODUCT } from "../Data/productData.js";
 const handleButtonCard = (listDataProductsAddCart)=>{
     let elementsProduceAct = document.querySelectorAll(".produce_activity");

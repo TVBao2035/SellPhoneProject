@@ -65,11 +65,22 @@ app.post('/user/update/profile', (req, res)=>{
         })
 })
 
+
 //--- [POST] /user/update/items
 app.post('/user/update/items', (req, res)=>{
     User.updateOne({email: req.body.email}, req.body)
         .then(()=>{console.log("Update Successful!!")})
 })
+
+// Warning:
+/*
+++++ On GitHub  
+        --> https://tvbao2035.github.io/SellPhoneProject/HTML/Admin/AdminPage.html
+        --> https://tvbao2035.github.io/SellPhoneProject 
+++++ On Live Server 
+        ---> http://127.0.0.1:5501/HTML/Admin/AdminPage.html
+        ---> http://127.0.0.1:5501
+*/
 
 //--- [POST] /user/check
 app.post('/user/check', (req, res)=>{
@@ -87,6 +98,11 @@ app.get('/admin/user/edit/:id', (req, res)=>{
         .catch(err => res.status(400).json(err, "ERROR"))
 })
 
+
+// Warning::
+//++++ On GitHub --> https://tvbao2035.github.io/SellPhoneProject/HTML/Admin/AdminPage.html
+//++++ On Live Server ---> http://127.0.0.1:5501/HTML/Admin/AdminPage.html
+
 //--- [POST] admin/user/edit/:id/update
 app.post('/admin/user/edit/:id/update', (req, res)=>{
     User.updateOne({_id:req.params.id}, req.body)
@@ -95,6 +111,11 @@ app.post('/admin/user/edit/:id/update', (req, res)=>{
             res.redirect('http://127.0.0.1:5501/HTML/Admin/AdminPage.html');
         })
 })
+
+// Warning::
+//++++ On GitHub --> https://tvbao2035.github.io/SellPhoneProject/HTML/Admin/AdminPage.html
+//++++ On Live Server ---> http://127.0.0.1:5501/HTML/Admin/AdminPage.html
+
 
 //--- [GET] admin/user/edit/:id/delete
 app.get('/admin/user/edit/:id/delete',(req, res)=>{
@@ -112,12 +133,23 @@ app.get('/admin/product/edit/:id', (req, res)=>{
            .catch(err => res.status(400).json(err, "ERROR"))
 })
 
+// Warning::
+//++++ On GitHub --> https://tvbao2035.github.io/SellPhoneProject/HTML/Admin/AdminPage.html
+//++++ On Live Server ---> http://127.0.0.1:5501/HTML/Admin/AdminPage.html
+
+
 //--- [POST] admin/product/edit/create
 app.post('/admin/product/edit/create', (req, res)=>{
     const product = new Product(req.body);
     product.save();
     res.redirect('http://127.0.0.1:5501/HTML/Admin/AdminPage.html');
 })
+
+
+// Warning::
+//++++ On GitHub --> https://tvbao2035.github.io/SellPhoneProject/HTML/Admin/AdminPage.html
+//++++ On Live Server ---> http://127.0.0.1:5501/HTML/Admin/AdminPage.html
+
 
 //--- [POST] admin/product/edit/:id/update
 app.post('/admin/product/edit/:id/update', (req, res)=>{
@@ -127,6 +159,10 @@ app.post('/admin/product/edit/:id/update', (req, res)=>{
                 res.redirect('http://127.0.0.1:5501/HTML/Admin/AdminPage.html');
             })
 })
+
+// Warning::
+//++++ On GitHub --> https://tvbao2035.github.io/SellPhoneProject/HTML/Admin/AdminPage.html
+//++++ On Live Server ---> http://127.0.0.1:5501/HTML/Admin/AdminPage.html
 
 //--- [GET] admin/product/edit/:id/delete
 app.get('/admin/product/edit/:id/delete',(req, res)=>{
