@@ -179,7 +179,7 @@ function Valid(mainElement, classListInput, submitElement)
                         if(isValidUser(user, DATA_USERS).passwordError 
                             && e_span_form.title === password_field.type)
                         {
-                            isNotValid(e_input_form, e_span_form, password_field);   
+                            isNotValid(e_input_form, e_span_form, password_field, "Password is wrong!");   
                         }
                     })
                     e.preventDefault();
