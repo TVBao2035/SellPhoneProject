@@ -1,5 +1,7 @@
+// var virtualData = fetch('https://tvbao2035.github.io/SellPhoneProject/data.json')
+//                   .then(data => data.json())
 
-
+//                   console.log(virtualData);
 async function getData(){
 
     return fetch('http://localhost:8000/product')
@@ -7,7 +9,7 @@ async function getData(){
     .then(data => data)
     .catch(()=>{
       console.log("Error Sever!!!!");
-      return virtualData;
+      return [];
     })
 
   

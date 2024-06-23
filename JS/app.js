@@ -176,7 +176,7 @@ if(index === 2)
 if(index === 3)
 {
     let cartList;
-    if(JSON.parse(localStorage.getItem(ACCOUNT_SIGNIN)).length!==0){
+    if(JSON.parse(localStorage.getItem(ACCOUNT_SIGNIN)).length != 0){
         cartList = JSON.parse(localStorage.getItem(ACCOUNT_SIGNIN))[0].items ? JSON.parse(localStorage.getItem(ACCOUNT_SIGNIN))[0].items: [];
 
     }else{
